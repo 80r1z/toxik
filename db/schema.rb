@@ -11,12 +11,21 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20131210150800) do
+ActiveRecord::Schema.define(version: 20131210163502) do
+
+  create_table "categories", force: true do |t|
+    t.string "subcategory"
+    t.string "name"
+  end
 
   create_table "products", force: true do |t|
     t.string  "description"
     t.string  "category"
     t.integer "stock"
+  end
+
+  create_table "subcategories", force: true do |t|
+    t.string "name"
   end
 
 # Could not dump table "users" because of following NoMethodError
