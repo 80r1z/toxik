@@ -6,8 +6,9 @@ SellPoint::Application.routes.draw do
 
   resources :users
 
-  namespace :admin do
+  namespace :admins do
     resources :users
+    resources :products
   end
 
 end
